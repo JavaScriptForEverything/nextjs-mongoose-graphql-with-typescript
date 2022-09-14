@@ -13,12 +13,14 @@
 
 ##### Creating Project
 ```
-$ mkdir my-app && cd my-app 			:
-$ yarn init -y 					:
+$ mkdir my-app && cd my-app 	:
+$ yarn init -y 			:
 
-$ yarn add next react react-dom 		: 'react' and 'react-dom' is dependencies of 'next'
-$ touch tsconfig.json 				: Enable Support, (Empty file)
-$ yarn add -D typescript @types/node @types/react : Add TypeScript dependencies packages
+$ yarn add next react react-dom : 'react' and 'react-dom' is dependencies of 'next'
+$ touch tsconfig.json 		: Enable Support, (Empty file)
+$ yarn add -D 	typescript  	: Add TypeScript dependencies packages
+		@types/node
+		@types/react
 
 ```
 
@@ -26,20 +28,20 @@ $ yarn add -D typescript @types/node @types/react : Add TypeScript dependencies 
 ###### package.json
 ```
 {
-  ...
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
-  },
-  ...
+	...
+	"scripts": {
+		"dev": "next",
+		"build": "next build",
+		"start": "next start"
+	},
+  	...
 }
 
 
-$ yarn dev 					: Start Server [ generate configs in tsconfig.json ]
+$ yarn dev 			: Start Server [ generate configs in tsconfig.json ]
 ```
 
-###### code pages/index.tsx 			:
+###### code pages/index.tsx
 
 ```
 const HomePage = () => {
@@ -97,11 +99,11 @@ export default HomePage
 ###### Install require packages:
 
 ```
-$ yarn add 	micro 				: We need Seperate Micro Server for Graphql
-		graphql 			: Original GraphQL
-		apollo-server-micro 		: apollo Server built-on top 'graphql' and micro
+$ yarn add 	micro 			: We need Seperate Micro Server for Graphql
+		graphql 		: Original GraphQL
+		apollo-server-micro 	: apollo Server built-on top 'graphql' and micro
 
-		micro-cors 			: Enable CORS on micro service
+		micro-cors 		: Enable CORS on micro service
 ```
 
 
