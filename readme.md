@@ -93,6 +93,7 @@ export default HomePage
 
 
 
+<!-- ----------[ GraphQL Server ]---------- -->
 
 ## Setup GraphQL Server with Next.js
 
@@ -214,6 +215,8 @@ export const getBook: Promise<Book> = async () => {
 
 
 
+<!-- ----------[ GraphQL Client ]---------- -->
+
 ## Setup GraphQL Client with Next.js
 
 Instead of axios, we have special package to get data from apollo server.
@@ -279,4 +282,61 @@ const HomePage = () => {
 ```
 
 
+
+
+
+
+
+<!-- ----------[ Material-UI Theme ]---------- -->
+
+## Design Page we *Material-UI*
+
+##### Install Package
+```
+$ yarn add @mui/material @emotion/react @emotion/styled
+
+```
+
+
+###### `/pages/_app.tsx`
+```
+...
+import { ThemeProvider } from '@mui/material'
+import { theme } from './../theme'
+...
+
+const MyApp = ({ Component, pageProps }) => {
+
+	return (
+		<ThemeProvider theme={theme}>
+			...
+				<Component {...pageProps} />
+			...
+		</ThemeProvider>
+	)
+}
+export default MyApp
+```
+
+
+###### /theme/index.ts
+```
+import { createTheme } from '@mui/material'
+export const theme = createTheme({
+
+})
+```
+
+
+
+
+<!-- ----------[ Redux ]---------- -->
+
+## Setup Redux with TypeScript
+
+##### Install Package
+```
+$ yarn add @reduxjs/toolkit react-redux
+
+```
 
