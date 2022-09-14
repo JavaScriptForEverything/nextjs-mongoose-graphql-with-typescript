@@ -168,7 +168,7 @@ export const config = {
 	.           	GET 	http://localhost:3000/api/graphql 	: GraphQL Endpoint
 
 
-###### Get tasks from Query
+###### Get Book from Query
 
 	Run the Query in GraphQL Server's client Request Section
 		. Ctrl + Enter 		: to run the Query
@@ -183,3 +183,28 @@ query ExampleQuery {
 ```
 
 
+###### Get Book from Query by axios
+
+```
+import axios from 'axios'
+
+import { Book } from '@shared/types'
+
+export const getBook: Promise<Book> = async () => {
+	const body = {
+		query: `
+			query {
+				book {
+					name
+					author
+				}
+			}
+		`,
+
+		variables: {}
+	}
+	const { data: { data } } = await axios.post<Book>('/api/graphql', body)
+	// console.log(data)
+	return data.book
+}
+```

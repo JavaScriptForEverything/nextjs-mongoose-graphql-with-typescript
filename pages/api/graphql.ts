@@ -1,30 +1,13 @@
-import { ApolloServer, gql } from 'apollo-server-micro'
-import Cors from 'micro-cors'
+import { ApolloServer } from 'apollo-server-micro'
+import cors from 'micro-cors'
+import database from '@server/models/database'
 
-const cors = Cors()
+import typeDefs from '@graphql/typeDefs'
+import resolvers from '@graphql/resolvers'
 
-const book = {
-	name: 'Book Name',
-	author: 'Book Author'
-}
+database() 		// create database connection
 
-const typeDefs = gql`
-	type Query {
-		book: Book
-	}
 
-	type Book {
-		name: String!
-		author: String!
-	}
-`
-
-const resolvers = {
-	Query: {
-		book: () => book
-	}
-
-}
 
 const server = new ApolloServer({
 	typeDefs,
@@ -41,7 +24,7 @@ const handler = async ( req, res) => {
 	await server.createHandler({ path: '/api/graphql' })(req, res)
 }
 
-export default cors(handler)
+export default cors()(handler)
 export const config = {
   api: {
     bodyParser: false,

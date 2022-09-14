@@ -6,9 +6,11 @@
 			"@components/*" : [ "components/*" ],
 			"@server/*" 		: [ "server/*" ],
 			"@store/*" 			: [ "store/*" ],
-			"@graphql/*" 		: [ "graphql/*" ],
 			"@data/*" 			: [ "data/*" ],
 			"@util/*" 			: [ "util/*" ],
+
+			"@graphql/*" 		: [ "graphql/*" ],
+			"@shared/*" 		: [ "shared/*" ],
 
 			"@public/*" 		: [ "public/*" ],
 			"@stripe/*" 		: [ "stripe/*" ],
