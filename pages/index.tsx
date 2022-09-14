@@ -1,22 +1,14 @@
-import { useQuery } from '@apollo/client'
-import { getBooksQuery } from '@graphql/queries'
+import BookList from '@components/booksList'
 
+import Typography from '@mui/material/Typography'
 
 const HomePage = () => {
-	const { loading, error, data } = useQuery(getBooksQuery)
-
-	if(loading) return <span>loading....</span>
-	if(error) return <span>Error Page</span>
-	// console.log(data.books)
-
-
 	return (
 		<>
-			<p>Home Page: GraphQL Data</p>
+			<Typography variant='h5' color='primary'>Home Page: GraphQL Data</Typography>
 
-			<pre>
-				{JSON.stringify(data.books, null, 2)}
-			</pre>
+			<BookList />
+
 		</>
 	)
 }
