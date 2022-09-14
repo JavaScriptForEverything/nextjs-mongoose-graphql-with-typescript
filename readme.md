@@ -94,7 +94,7 @@ export default HomePage
 
 
 
-## Setup GraphQL with Next.js
+## Setup GraphQL Server with Next.js
 
 ###### Install require packages:
 
@@ -211,3 +211,72 @@ export const getBook: Promise<Book> = async () => {
 	return data.book
 }
 ```
+
+
+
+## Setup GraphQL Client with Next.js
+
+Instead of axios, we have special package to get data from apollo server.
+
+
+###### Install require packages:
+
+```
+$ yarn add  @apollo/react 		: To get Data from Apollo Server very quick and easyly
+```
+
+
+##### `/pages/_app.tsx`
+```
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
+const client = new ApolloClient({
+	uri: 'http://localhost:3000/api/graphql',
+	cache: new InMemoryCache()
+})
+
+
+const MyApp = ({ Component, pageProps }) => {
+	return (
+		<ApolloProvider client={client}>
+			<Component {...pageProps} />
+		</ApolloProvider>
+	)
+}
+export default MyApp
+```
+
+
+
+##### /pages/index.tsx
+
+```
+import { useQuery, gql } from '@apollo/client'
+
+const getBooksQuery = gql`
+	query {
+		books {
+			id
+			name
+		}
+	}
+`
+
+
+const HomePage = () => {
+
+	const { loading, error, data } = useQuery( getBooksQuery )
+
+	if(loading) return <LoadingComponent />
+	if(error) return <ErrorComponent />
+
+	console.log( data )
+
+	return (
+		<>
+		</>
+	)
+}
+```
+
+
+

@@ -9,12 +9,7 @@ database() 		// create database connection
 
 
 
-const server = new ApolloServer({
-	typeDefs,
-	resolvers
-})
-
-
+const server = new ApolloServer({ typeDefs, resolvers })
 const startServer = server.start()
 
 const handler = async ( req, res) => {
@@ -25,8 +20,4 @@ const handler = async ( req, res) => {
 }
 
 export default cors()(handler)
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-}
+export const config = { api: { bodyParser: false, } }

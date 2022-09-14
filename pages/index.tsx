@@ -1,26 +1,22 @@
-import { useEffect, useState } from 'react'
-import * as productReducer from '@store/productReducer'
-import { Book } from '@shared/types'
+import { useQuery } from '@apollo/client'
+import { getBooksQuery } from '@graphql/queries'
+
 
 const HomePage = () => {
-	const [ book, setBook ] = useState<Book>({
-		name: '',
-		author: ''
-	})
+	const { loading, error, data } = useQuery(getBooksQuery)
 
-	useEffect(() => {
-		(async() => {
-			setBook( await productReducer.getBook() )
-		})()
-	}, [])
+	if(loading) return <span>loading....</span>
+	if(error) return <span>Error Page</span>
+	// console.log(data.books)
+
 
 	return (
 		<>
-		<p>Home Page: GraphQL Data</p>
+			<p>Home Page: GraphQL Data</p>
 
-		<p>
-			<span>{book.name}</span> <span>{book.author}</span>
-		</p>
+			<pre>
+				{JSON.stringify(data.books, null, 2)}
+			</pre>
 		</>
 	)
 }

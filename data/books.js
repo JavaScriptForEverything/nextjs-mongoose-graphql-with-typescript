@@ -11,7 +11,7 @@ export const books = [
 		edition: 1,
 		year: 2011,
 		pages: [252],
-		Publisher: 'O\'Reilly Media'
+		publisher: 'O\'Reilly Media'
 	},
 	{
 		id: '2',
@@ -25,7 +25,7 @@ export const books = [
 		edition: 2,
 		year: 2014,
 		pages: [304, 306],
-		Publisher: 'No Starch Press'
+		publisher: 'No Starch Press'
 	},
 	{
 		id: '3',
@@ -39,7 +39,7 @@ export const books = [
 		edition: 1,
 		year: 2018,
 		pages: [472, 473],
-		Publisher: 'Manning Publications'
+		publisher: 'Manning Publications'
 	},
 	{
 		id: '4',
@@ -53,7 +53,7 @@ export const books = [
 		edition: 5,
 		year: 2015,
 		pages: [829],
-		Publisher: 'Wrox'
+		publisher: 'Wrox'
 	},
 	{
 		id: '5',
@@ -67,7 +67,7 @@ export const books = [
 		edition: 4,
 		year: 2020,
 		pages: [1174],
-		Publisher: 'Wrox'
+		publisher: 'Wrox'
 	},
 
 	{
@@ -82,7 +82,7 @@ export const books = [
 		edition: 3,
 		year: 2019,
 		pages: [514],
-		Publisher: 'O\'Reilly Media'
+		publisher: 'O\'Reilly Media'
 	},
 	{
 		id: '7',
@@ -96,7 +96,7 @@ export const books = [
 		edition: 1,
 		year: 2003,
 		pages: [142],
-		Publisher: 'Packt Publishing'
+		publisher: 'Packt Publishing'
 	},
 	{
 		id: '8',
@@ -110,7 +110,7 @@ export const books = [
 		edition: 2,
 		year: 2020,
 		pages: [488],
-		Publisher: 'O\'Reilly Media'
+		publisher: 'O\'Reilly Media'
 	},
 	{
 		id: '9',
@@ -124,7 +124,7 @@ export const books = [
 		edition: 1,
 		year: 2019,
 		pages: [551],
-		Publisher: 'Apress'
+		publisher: 'Apress'
 	},
 	{
 		id: '10',
@@ -138,7 +138,7 @@ export const books = [
 		edition: 1,
 		year: 2020,
 		pages: [745],
-		Publisher: 'www.com'
+		publisher: 'www.com'
 	},
 	{
 		id: '11',
@@ -152,13 +152,13 @@ export const books = [
 		edition: 1,
 		year: 2015,
 		pages: [140],
-		Publisher: 'Packt Publishing'
+		publisher: 'Packt Publishing'
 	},
 	{
 		id: '12',
 		name: 'Fullstack React Native The Complete Guide to React Native',
 		author: ' Devin Abbot, Houssein Djirdeh, Anthony Accomazzo, and Sophia Shoemaker',
-		category: 'reactNative',
+		category: 'react-native',
 		image_url: '/images/books/fullstack_react_native.jpg',
 		summary: 'Building the same app in both Swift and Java is time-consuming. With React Native, you can release a native app on both iOS and Android from a single codebase',
 		description: 'When you buy Fullstack React Native, you\'re not buying just a book, but dozens of code examples. Every chapter in the book comes with a complete project that uses the concepts in the chapter and provides support for both iOS (including iPhone X screens) & Android.',
@@ -166,7 +166,7 @@ export const books = [
 		edition: 5,
 		year: 2017,
 		pages: [552],
-		Publisher: ''
+		publisher: ''
 	},
 	{
 		id: '13',
@@ -180,7 +180,7 @@ export const books = [
 		edition: 2,
 		year: 2019,
 		pages: [504, 506],
-		Publisher: 'No Starch Press'
+		publisher: 'No Starch Press'
 	},
 	{
 		id: '14',
@@ -194,7 +194,7 @@ export const books = [
 		edition: 2,
 		year: 2018,
 		pages: [552, 648],
-		Publisher: 'Packt Publishing'
+		publisher: 'Packt Publishing'
 	},
 	{
 		id: '15',
@@ -208,7 +208,7 @@ export const books = [
 		edition: 1,
 		year: 2018,
 		pages: [248, 254],
-		Publisher: 'No Starch Press'
+		publisher: 'No Starch Press'
 	},
 	{
 		id: '16',
@@ -222,7 +222,7 @@ export const books = [
 		edition: 1,
 		year: 2018,
 		pages: [818],
-		Publisher: 'Packt Publishing'
+		publisher: 'Packt Publishing'
 	},
 	{
 		id: '17',
@@ -236,7 +236,7 @@ export const books = [
 		edition: 1,
 		year: 2020,
 		pages: [666],
-		Publisher: 'Packt Publishing'
+		publisher: 'Packt Publishing'
 	},
 	{
 		id: '18',
@@ -245,12 +245,12 @@ export const books = [
 		category: 'util',
 		image_url: '/images/books/practical_vim.jpg',
 		summary: 'A highly configurable, cross-platform text editor, Vim is a serious tool for programmers, web developers, and sysadmins who want to raise their game.',
-		description: 'Vim is a fast and efficient text editor that will make you a faster and more efficient developer. It's available on almost every OS, and if you master the techniques in this book, you'll never need another text editor. In more than 120 Vim tips, you'll quickly learn the editor's core functionality and tackle your trickiest editing and writing tasks. This beloved bestseller has been revised and updated to Vim 8 and includes three brand-new tips and five fully revised tips',
-		language: 'english',
+		description: `Vim is a fast and efficient text editor that will make you a faster and more efficient developer. It's available on almost every OS, and if you master the techniques in this book, you'll never need another text editor. In more than 120 Vim tips, you'll quickly learn the editor's core functionality and tackle your trickiest editing and writing tasks. This beloved bestseller has been revised and updated to Vim 8 and includes three brand-new tips and five fully revised tips',
+		language: 'english`,
 		edition: 2,
 		year: 2015,
 		pages: [356, 335],
-		Publisher: 'Pragmatic Bookshelf'
+		publisher: 'Pragmatic Bookshelf'
 	},
 	{
 		id: '19',
@@ -264,7 +264,7 @@ export const books = [
 		edition: 1,
 		year: 2017,
 		pages: [100],
-		Publisher: 'Pragmatic Bookshelf'
+		publisher: 'Pragmatic Bookshelf'
 	},
 	{
 		id: '20',
@@ -278,6 +278,6 @@ export const books = [
 		edition: 1,
 		year: 2018,
 		pages: [400],
-		Publisher: ''
+		publisher: ''
 	},
 ]

@@ -1,14 +1,11 @@
 import { Book } from '@shared/types'
+import { books } from '@data/books'
 
 
-const book: Book = {
-	name: 'CSS in Depth',
-	author: 'Keith J. Grant'
-}
 
 const resolvers = {
 	Query: {
-		book: (): Book => book
+		books: () => books
 	}
 
 }
