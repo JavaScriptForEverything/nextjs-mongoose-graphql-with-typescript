@@ -1,8 +1,9 @@
 ### Next.js, TypeScript, Mongoose and GraphQL with ApolloServer
 
+
 <img
 	width = "100%"
-	src="https://github.com/JavaScriptForEverything/nextjs-typescript-graphql-mongoose/blob/master/public/nextjs-mongoose-graphql-apollo-server.png"
+	src="https://github.com/JavaScriptForEverything/nextjs-mongoose-graphql-with-typescript/blob/master/public/nextjs-mongoose-graphql-apollo-server.png"
 	alt="nextjs-mongoose-graphql-apollo-server.png"
 />
 <br />
