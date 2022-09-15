@@ -1,5 +1,7 @@
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 import { ThemeProvider } from '@mui/material'
+import { AppProps } from 'next/app'
+
 import { theme } from './../theme'
 
 const client = new ApolloClient({
@@ -7,7 +9,7 @@ const client = new ApolloClient({
 	cache: new InMemoryCache()
 })
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
 
 	return (
 		<ThemeProvider theme={theme}>
